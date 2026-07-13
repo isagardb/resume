@@ -263,9 +263,50 @@ h1 {
 
 .hero-summary {
     max-width: 710px;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
     color: var(--muted);
     font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 28px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 7px 11px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 750;
+    transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+    background: var(--accent-soft);
+    color: var(--text);
+}
+
+.contact-links a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    outline-offset: 3px;
+}
+
+.contact-links svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+    fill: currentColor;
 }
 
 .skill-list {
@@ -307,17 +348,16 @@ h1 {
     content: "";
 }
 
-.profile-monogram {
-    display: grid;
-    width: 68px;
-    height: 68px;
+.profile-photo {
+    display: block;
+    width: 112px;
+    height: 112px;
     margin-bottom: 26px;
-    place-items: center;
-    border-radius: 21px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 900;
+    border: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    border-radius: 28px;
+    object-fit: cover;
+    object-position: center 34%;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
 }
 
 .profile-label {
